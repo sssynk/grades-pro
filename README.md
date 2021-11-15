@@ -5,3 +5,4 @@ a simple electron app to let people in the issaquah school district look up thei
 unfinished, all keys in code are non-functional. a .env file is required for use.
 
 created by james
+only tested on mac
