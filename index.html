@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <title>Grades Pro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="loader.css">
+    <style>
+        .neumorphism {
+            border-radius: 15px;
+            background: linear-gradient(145deg, #f0f0f0, #dbdbdb);;
+            box-shadow:  5px 5px 10px #bebebe,
+             -5px -5px 10px #ffffff;
+        }
+        .grade-title {
+            display: inline-block;
+            font-weight: 900;
+            font-size: large;
+            line-height: 1;
+            margin-left: 2%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        .grade-desc {
+            float: right;
+            font-weight: 300;
+            font-size: large;
+            line-height: 1;
+            margin-top: 2%;
+            margin-right: 2%;
+            margin-bottom: 2%;
+        }
+
+        .fullscreen{
+            position:absolute;
+            top:0;
+            left:0;
+            bottom:0;
+            right:0;
+            height:100%;
+            width:100%;
+        }
+
+        body {
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+
+        body::-webkit-scrollbar {
+            width: 20px;
+        }
+        body::-webkit-scrollbar-corner {
+            background: rgba(0,0,0,0);
+        }
+        body::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 6px;
+            border: 4px solid rgba(0,0,0,0);
+            background-clip: content-box;
+            min-width: 32px;
+            min-height: 32px;
+        }
+        body::-webkit-scrollbar-track {
+            background-color: rgba(139, 138, 138, 0);
+        }
+
+    </style>
+  </head>
+  <body style="font-family: 'Lato' , sans-serif !important; background-color: #e0e0e0; transition-duration: 0.5s; user-select: none;">
+        <h1 style="margin-top: 6%; margin-left: 2%;">Your Grades</h1>
+        <p style="margin-left: 2%; line-height: 0; font-weight: 300;margin-top: 1%;font-size: medium;">Welcome back, James</p>
+        <template id="course"><div class="neumorphism" style="width: 50%;margin-top: 1.5%;" data-courseid="none"><p class="grade-title">Class 1</p><p class="grade-desc">A+ <i>(100.0%)</i></p></div></template>
+        <div style="float: right; margin-top: 5%; width: 40%;">
+            <div class="notification_basic neumorphism" style="float: right; margin-right: 5%; width: 100%; margin-bottom: 2.5%;">
+                <button id="dismiss" style="float: right; border-style: none; background-color: rgba(0,0,0,0); color: #949494; user-select: auto; margin-top: 6.5%; margin-right: 5%;font-size: xx-small;">Dismiss</button>
+                <p id="title" style="font-size: medium; font-weight: 700; margin-top: 5%;margin-left: 2.5%;">Nice One!</p>
+                <p id="desc" style="font-size: small;margin-bottom: 5%;margin-left: 2.5%;">Nice job with your <b>A+</b> on <b>Summative Assignment</b></p>
+            </div>
+            <div class="notification_basic neumorphism" style="float: right; margin-right: 5%; width: 100%; margin-bottom: 2.5%;">
+                <button id="dismiss" style="float: right; border-style: none; background-color: rgba(0,0,0,0); color: #949494; user-select: auto; margin-top: 6.5%; margin-right: 5%;font-size: xx-small;">Dismiss</button>
+                <p id="title" style="font-size: medium; font-weight: 700; margin-top: 5%;margin-left: 2.5%;">Nice One!</p>
+                <p id="desc" style="font-size: small;margin-bottom: 5%;margin-left: 2.5%;">Nice job with your <b>A+</b> on <b>Summative Assignment</b></p>
+            </div>
+            <div class="notification_basic neumorphism" style="float: right; margin-right: 5%; width: 100%; margin-bottom: 2.5%;">
+                <button id="dismiss" style="float: right; border-style: none; background-color: rgba(0,0,0,0); color: #949494; user-select: auto; margin-top: 6.5%; margin-right: 5%;font-size: xx-small;">Dismiss</button>
+                <p id="title" style="font-size: medium; font-weight: 700; margin-top: 5%;margin-left: 2.5%;">Nice One!</p>
+                <p id="desc" style="font-size: small;margin-bottom: 5%;margin-left: 2.5%;">Nice job with your <b>A+</b> on <b>Summative Assignment</b></p>
+            </div>
+        </div>
+        <div style="margin-top: 5%; margin-left: 2%;" id="course_holder">
+        </div>
+        <div id="loader" class="fullscreen body">
+            <main>
+                <div class="preloader">
+                    <div class="preloader__square"></div>
+                    <div class="preloader__square"></div>
+                    <div class="preloader__square"></div>
+                    <div class="preloader__square"></div>
+                </div>
+                <div class="status">Loading<span class="status__dot">.</span><span class="status__dot">.</span><span class="status__dot">.</span></div>
+            </main>
+        </div>
+        <footer style="margin-top: 6%;margin-bottom: 2%;">
+            <p id="updated" style="margin-left: 2%;font-size: xx-small;color: #979797;">&copy; 2020 Grades Pro</p>
+  </body>
+</html>

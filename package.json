@@ -1,0 +1,23 @@
+{
+  "name": "electron-grades",
+  "productName": "Grades Pro",
+  "version": "1.0.0",
+  "description": "Grades app.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "electron": "^15.3.1",
+    "electron-builder": "^22.13.1",
+    "electron-packager": "^15.4.0",
+    "requests": "^0.3.0",
+    "tinycolor2": "^1.4.2"
+  },
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
