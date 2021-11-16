@@ -4,7 +4,7 @@ import time
 print("Checking for Updates...")
 print("")
 print("Grades Pro Installer")
-key = input("Enter your Canvas API key: ")
+key = raw_input("Enter your Canvas API key: ")
 print("Setting up Grades Pro with: " + key)
 
 f = open(".env", "w")
