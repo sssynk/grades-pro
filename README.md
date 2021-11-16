@@ -10,9 +10,9 @@ npm
 node
 
 setup:
-clone git or download
-cd into directory
-python setup.py
+clone git or download,
+cd into directory,
+python setup.py,
 npm start
 
 created by james
